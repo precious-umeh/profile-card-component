@@ -1,0 +1,106 @@
+:root {
+  --color-dark-cyan: hsl(185, 75%, 39%);
+  --color-dark-blue: hsl(229, 23%, 23%);
+  --color-grey-blue: hsl(227, 10%, 46%);
+  --color-grey-dark: hsl(0, 0%, 59%);
+  --color-white: #fff;
+}
+
+$bp-sm: 24em;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Kumbh Sans" sans-serif;
+  font-weight: 400;
+  font-size: 1.8rem;
+  text-align: center;
+  color: var(--color-grey-blue);
+  background-color: var(--color-dark-cyan);
+  background-image: url(../images/bg-pattern-top.svg),
+    url(../images/bg-pattern-bottom.svg);
+  background-size: 80rem, 80rem;
+  background-repeat: no-repeat, no-repeat;
+  background-position: top -30rem left -10rem, bottom -50rem right -10rem;
+}
+
+.profile {
+  max-width: 37.5rem;
+  margin: 15rem auto;
+  background-color: var(--color-white);
+  border-radius: 1.2rem;
+  overflow: hidden;
+  position: relative;
+
+  @media only screen and (max-width: $bp-sm) {
+    margin: 15rem 2rem;
+  }
+
+  &__card-pattern {
+    width: 100%;
+  }
+
+  &__profile-img {
+    position: absolute;
+    left: 50%;
+    top: 45%;
+    transform: translate(-50%, -80%);
+    border-radius: 50%;
+    border: 5px solid var(--color-white);
+  }
+
+  &__name {
+    padding-top: 6rem;
+    padding-bottom: 0.8rem;
+    font-size: 3rem;
+    color: var(--color-dark-blue);
+
+    span {
+      display: inline-block;
+      color: var(--color-grey-blue);
+      padding-left: 0.5rem;
+    }
+  }
+
+  &__location {
+    border-bottom: 1px solid var(--color-grey-dark);
+    padding-bottom: 2rem;
+  }
+
+  &__details {
+    padding: 2.5rem 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6rem;
+
+    &-number {
+      font-size: 2rem;
+      font-weight: 700;
+      color: var(--color-dark-blue);
+    }
+
+    &-highlight {
+      font-size: 1.4rem;
+      display: inline-block;
+    }
+  }
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  color: var(--color-dark-blue);
+
+  a {
+    color: var(--color-dark-blue);
+  }
+}
